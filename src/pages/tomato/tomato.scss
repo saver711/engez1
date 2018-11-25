@@ -1,0 +1,143 @@
+page-tomato {
+
+    .header{
+        display: none
+    }
+
+    .mycontainer {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+
+        &__icon {
+            color: color($colors, light);
+            width: 25px;
+            height: 25px;
+            @include fcenter;
+            border: 1px solid color($colors, light);
+            border-radius: 50%;
+
+            &::before {
+                @include pcenter;
+                transform: translate(-50%, -42%);
+            }
+        }
+    }
+
+    .content {
+        background: linear-gradient(to top, darkred, color($colors, pamap));
+    }
+
+    .toolbar-background,
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: transparent;
+    }
+
+    /////////////////////// S explain
+    .explain {
+
+        color: color($colors, light);
+        height: 100%;
+        text-align: center;
+        padding: 5rem 1rem 0;
+
+        &__icon {
+            font-size: 3rem;
+        }
+
+        &__heading {
+            margin: .5rem 0;
+        }
+
+        &__text {
+            line-height: 1.7;
+        }
+
+        &__btn {
+            background-color: color($colors, light);
+            color: color($colors, pamap);
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            border: 0;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+
+    }
+
+    ////////////////////////// E explain
+
+
+    ///////////////////////////
+    .time-picker{
+        margin-top: 8rem;
+    }
+    
+    .time {
+        font-size: 4rem;
+        font-weight: 100;
+        color: color($colors, light);
+        font-family: cursive;
+        text-align: center;
+        margin-top: 1.3rem;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+
+        &__icons {
+            width: 3rem;
+            height: 3rem;
+            background-color: color($colors, light);
+            color: color($colors, pamap);
+            border-radius: 50%;
+            position: relative;
+
+            &:not(last-of-type) {
+                margin-left: .6rem;
+            }
+
+            &::before {
+                @include pcenter;
+
+            }
+
+            &--play {
+
+                &::before {
+                    transform: translate(-31%, -44%);
+                }
+            }
+        }
+    }
+
+    .swiper-pagination {
+        direction: ltr;
+    }
+    
+    /////////////////////////////////////////////// reset ionic
+    
+    .range .range-knob-handle,
+    .range-wp .range-knob-handle,
+    .range-md .range-knob-handle,
+    .range-ios .range-knob-handle {
+        width: 21px;
+    }
+
+    .range .range-knob,
+    .range-wp .range-knob,
+    .range-md .range-knob,
+    .range-ios .range-knob {
+        background-color: color($colors, pamap);
+    }
+}

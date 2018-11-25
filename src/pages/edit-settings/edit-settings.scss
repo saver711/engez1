@@ -1,0 +1,54 @@
+page-edit-settings {
+    .fixed-content {
+        background-color: #f2f2f2;
+    }
+
+    .toolbar-background,
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: color($colors, primary2);
+    }
+    
+    
+    .edit{
+        
+        
+        &__icon{
+            color: color($colors, primary2);
+        }
+    }
+    
+    ////////////// reset ionic
+
+    ///////////////////////////////////////////////// reset ionic
+    
+    .item ion-icon[item-left] + .item-inner,
+    .item ion-icon[item-left] + .item-input,
+    .item ion-icon[item-start] + .item-inner,
+    .item ion-icon[item-start] + .item-input,
+    
+    .item-md ion-icon[item-left] + .item-inner,
+    .item-md ion-icon[item-left] + .item-input,
+    .item-md ion-icon[item-start] + .item-inner,
+    .item-md ion-icon[item-start] + .item-input,
+    
+    .item-ios ion-icon[item-left] + .item-inner,
+    .item-ios ion-icon[item-left] + .item-input,
+    .item-ios ion-icon[item-start] + .item-inner,
+    .item-ios ion-icon[item-start] + .item-input,
+    
+    .item-wp ion-icon[item-left] + .item-inner,
+    .item-wp ion-icon[item-left] + .item-input,
+    .item-wp ion-icon[item-start] + .item-inner,
+    .item-wp ion-icon[item-start] + .item-input {
+        margin: 0;
+    }
+    
+    .item-input .label, .item-select .label, .item-datetime .label,
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md,
+    .item-input .label-ios, .item-select .label-ios, .item-datetime .label-ios,
+    .item-input .label-wp, .item-select .label-wp, .item-datetime .label-wp{
+        color: #000;
+    }
+    
+}

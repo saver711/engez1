@@ -1,0 +1,187 @@
+<ion-header class="header">
+    <ion-navbar class="navbar">
+        <ion-title class="title">
+            <div class="logo">
+                <img src="../../assets/imgs/logo.png" alt="">
+            </div>
+            <p>مفكرة انجز</p>
+            <ion-icon name="exit" (click)="goTo('register')" class="title__register"></ion-icon>
+            <!--<ion-icon name="settings" (click)="goTo('settings')"></ion-icon>-->
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <!-------------------S Tasks----------------->
+    <ion-grid class="upper-grid">
+        <ion-row>
+            <ion-col class="upper-grid__col" col-12>
+
+                <!------------------------------daily-card----------------------------->
+                <ion-card class="card daily-card">
+                    <ion-card-header class="card__header">
+                        <ion-icon name='paper-plane' color='light' class="card__icon" (click)="goTo('daily')"></ion-icon>
+                        <div class="card__title" (click)="slideToggle('daily')">
+                            <i item-right class="fa fa-chevron-up" aria-hidden="true"></i>
+                            <span>أهدافى اليومية</span>
+                        </div>
+                    </ion-card-header>
+
+                    <ion-card-content class="card__content">
+                        <ion-list no-lines inset class="card__list">
+                            <ion-item class="card__item">
+                                <div class="card__tasks">
+                                    <p class="have">لديك <span>( 10 )</span> أهداف</p>
+                                    <p class="done">تم انجاز <span>( 6 )</span> منها</p>
+                                </div>
+                                <div class="card__shape">
+                                    <div class="circle2">
+                                        <span class="inner"></span>
+                                        <span style="height: 60%" class="negative-percent"></span>
+                                        <div class="circle2__achieved">
+                                            <p text-center>%60</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            
+            <ion-col class="upper-grid__col" col-12>
+
+                <!------------------------------weekly-card----------------------------->
+                <ion-card class="card weekly-card">
+
+                    <ion-card-header class="card__header">
+                        <ion-icon name='paper-plane' color='light' class="card__icon" (click)="goTo('weekly')"></ion-icon>
+                        <div class="card__title" (click)="slideToggle('weekly')">
+                            <i item-right class="fa fa-chevron-down" aria-hidden="true"></i>
+                            <span>أهدافى الاسبوعية</span>
+                        </div>
+                    </ion-card-header>
+
+                    <ion-card-content class="card__content">
+                        <ion-list no-lines inset class="card__list">
+                            <ion-item class="card__item">
+                                <div class="card__tasks">
+                                    <p class="have">لديك <span>( 10 )</span> أهداف</p>
+                                    <p class="done">تم انجاز <span>( 6 )</span> منها</p>
+                                </div>
+                                <div class="card__shape">
+                                    <div class="circle2">
+                                        <span class="inner"></span>
+                                        <span style="height: 60%" class="negative-percent"></span>
+                                        <div class="circle2__achieved">
+                                            <p text-center>%60</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            
+            <ion-col class="upper-grid__col" col-12>
+
+                <!------------------------------monthly-card----------------------------->
+                <ion-card class="card monthly-card">
+
+                    <ion-card-header class="card__header">
+                        <ion-icon name='paper-plane' color='light' class="card__icon" (click)="goTo('monthly')"></ion-icon>
+                        <div class="card__title" (click)="slideToggle('monthly')">
+                            <i item-right class="fa fa-chevron-down" aria-hidden="true"></i>
+                            <span>أهدافى الشهرية</span>
+                        </div>
+                    </ion-card-header>
+
+                    <ion-card-content class="card__content">
+                        <ion-list no-lines inset class="card__list">
+                            <ion-item class="card__item">
+                                <div class="card__tasks">
+                                    <p class="have">لديك <span>( 10 )</span> أهداف</p>
+                                    <p class="done">تم انجاز <span>( 6 )</span> منها</p>
+                                </div>
+                                <div class="card__shape">
+                                    <div class="circle2">
+                                        <span class="inner"></span>
+                                        <span style="height: 60%" class="negative-percent"></span>
+                                        <div class="circle2__achieved">
+                                            <p text-center>%60</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            
+            <ion-col class="upper-grid__col" col-12>
+
+                <!------------------------------year-card----------------------------->
+                <ion-card class="card year-card">
+
+                    <ion-card-header class="card__header">
+                        <ion-icon name='paper-plane' color='light' class="redbg card__icon" (click)="goTo('year')"></ion-icon>
+                        <div class="card__title" (click)="slideToggle('year')">
+                            <i item-right class="fa fa-chevron-down" aria-hidden="true"></i>
+                            <span>أهدافى السنوية</span>
+                        </div>
+                    </ion-card-header>
+
+                    <ion-card-content class="card__content">
+                        <ion-list no-lines inset class="card__list">
+                            <ion-item class="card__item">
+                                <div class="card__tasks">
+                                    <p class="have">لديك <span>( 10 )</span> أهداف</p>
+                                    <p class="done">تم انجاز <span>( 6 )</span> منها</p>
+                                </div>
+                                <div class="card__shape">
+                                    <div class="circle2">
+                                        <span class="inner"></span>
+                                        <span style="height: 60%" class="negative-percent"></span>
+                                        <div class="circle2__achieved">
+                                            <p text-center>%60</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-------------------E Tasks----------------->
+
+    <!-------------------S Circles----------------->
+    <ion-grid class="lower-grid">
+        <ion-row>
+            <ion-col col-6>
+                <div class="note circle" (click)="goTo('notes')">
+                    <img src="../../assets/imgs/note.png" alt="note">
+
+                </div>
+            </ion-col>
+
+            <ion-col col-6>
+                <div class="tomato circle" (click)="goTo('tomato')">
+                    <img src="../../assets/imgs/tomato.png" alt="tomato">
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!-------------------E Circles----------------->
+
+
+    <!--try---------------------->
+
+
+
+</ion-content>

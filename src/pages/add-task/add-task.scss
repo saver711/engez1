@@ -1,0 +1,184 @@
+page-add-task {
+
+    .toolbar-background,
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: color($colors, dp);
+    }
+
+    .add {
+
+        &__row {
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            color: color($colors, dp);
+            font-size: 2.6rem;
+            display: inline-block;
+
+        }
+
+        &__target {
+            border-bottom: 1px solid #ddd;
+
+            ion-label {
+                font-size: 1.5rem;
+                max-width: 8rem;
+                margin: 0;
+            }
+
+        }
+
+        .repeat {
+            position: relative;
+            z-index: 1;
+
+            &__msg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-55%);
+                right: 11rem;
+                z-index: 1;
+                padding: .5rem 1rem;
+                box-shadow: 0px 0px 20px -2.8px color($colors, dp);
+                border-radius: 5px;
+                display: none;
+            }
+
+            &__icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-55%);
+                left: .4rem;
+                color: #666;
+                width: 3rem;
+                height: 3rem;
+
+                &::before {
+                    @include pcenter;
+                }
+
+                &.active {
+                    color: color($colors, dp);
+                    animation: shake .4s ease;
+                }
+            }
+        }
+
+        &__repeat {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            padding: 0;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 3rem;
+
+            .item-inner {
+                width: 7rem;
+                flex: unset;
+            }
+
+            .item-cover {
+                width: 10rem;
+            }
+        }
+
+        &__argent-case {
+            border-bottom: 1px solid #ddd;
+            flex-direction: column;
+
+            ion-item {
+                height: 4.4rem;
+
+                .item-inner {
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &__argent {
+            .item-inner {
+                border: none;
+            }
+        }
+
+        &__btns {
+            @include fcenter;
+
+            button {
+                border: none;
+                padding: .3rem 3rem;
+                color: color($colors, light);
+                height: 3.4rem;
+            }
+        }
+
+        &__go {
+            background-color: color($colors, dp);
+        }
+
+        &__back {
+            background-color: color($colors, danger);
+            margin-right: 2rem;
+
+            .button-inner {
+                display: inline-block;
+                line-height: 1.9;
+            }
+        }
+    }
+
+
+    //////////////////////////////////////////////// reset ionic
+    .list .item-block .item-inner,
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner,
+    .list-wp .item-block .item-inner {
+        border: none;
+    }
+
+    .item.item-block .item-inner,
+    .item-md.item-block .item-inner,
+    .item-ios.item-block .item-inner,
+    .item-wp.item-block .item-inner {
+        border: none;
+    }
+
+    .item.item .checkbox,
+    .item.item-md .checkbox-md,
+    .item.item-ios .checkbox-ios,
+    .item.item-wp .checkbox-wp {
+        margin: 0 1rem 0 0;
+    }
+    
+    .list > .item-block:last-child,
+    .list > .item-wrapper:last-child .item-block,
+    .list > .item-block:first-child,
+    .list > .item-wrapper:first-child .item-block,
+    
+    .list-ios > .item-block:last-child,
+    .list-ios > .item-wrapper:last-child .item-block,
+    .list-ios > .item-block:first-child,
+    .list-ios > .item-wrapper:first-child .item-block,
+    
+    .list-md > .item-block:first-child,
+    .list-md > .item-wrapper:first-child .item-block,
+    .list-md > .item-block:last-child,
+    .list-md > .item-wrapper:last-child .item-block,
+    
+    .list-wp > .item-block:last-child,
+    .list-wp > .item-wrapper:last-child .item-block,
+    .list-wp > .item-block:first-child,
+    .list-wp > .item-wrapper:first-child .item-block{
+        border: none;
+    }
+    
+    .list,
+    .list-md,
+    .list-ios,
+    .list-wp{
+        margin: 0;
+    }
+}

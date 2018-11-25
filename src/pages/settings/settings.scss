@@ -1,0 +1,113 @@
+page-settings {
+    .fixed-content {
+        background-color: #f2f2f2;
+    }
+
+    .toolbar-background,
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: color($colors, primary2);
+    }
+
+    .set {
+
+        &__personal {
+            background: color($colors, primary2);
+            color: color($colors, light);
+
+            .set__label {
+                color: color($colors, light);
+                font-size: 1.8rem;
+            }
+
+            .set__icon {
+                color: color($colors, light);
+            }
+
+            .item-inner {
+                border-bottom: 0 !important;
+            }
+        }
+
+        &__row {
+            .label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0 .8rem;
+            }
+        }
+
+        &__name {
+            .label {
+                .set__value {
+                    min-width: calc(100% - 45px);
+                }
+            }
+        }
+
+        &__phone {
+            .label {
+                .set__value {
+                    min-width: calc(100% - 55px);
+                }
+            }
+        }
+
+        &__email {
+            .label {
+                .set__value {
+                    min-width: calc(100% - 105px);
+                }
+            }
+        }
+
+        &__pass {
+            margin-top: 3rem;
+        }
+
+        &__out {
+
+            .set__icon {
+                color: color($colors, danger);
+                transform: rotate(180deg);
+            }
+        }
+
+        &__icon {
+            width: 3rem;
+            position: relative;
+            color: color($colors, primary2);
+
+            &::before {
+                @include pcenter;
+            }
+        }
+    }
+
+
+    ///////////////////////////////////////// reset ionic
+    
+    .item ion-icon[item-left] + .item-inner,
+    .item ion-icon[item-left] + .item-input,
+    .item ion-icon[item-start] + .item-inner,
+    .item ion-icon[item-start] + .item-input,
+    
+    .item-md ion-icon[item-left] + .item-inner,
+    .item-md ion-icon[item-left] + .item-input,
+    .item-md ion-icon[item-start] + .item-inner,
+    .item-md ion-icon[item-start] + .item-input,
+    
+    .item-ios ion-icon[item-left] + .item-inner,
+    .item-ios ion-icon[item-left] + .item-input,
+    .item-ios ion-icon[item-start] + .item-inner,
+    .item-ios ion-icon[item-start] + .item-input,
+    
+    .item-wp ion-icon[item-left] + .item-inner,
+    .item-wp ion-icon[item-left] + .item-input,
+    .item-wp ion-icon[item-start] + .item-inner,
+    .item-wp ion-icon[item-start] + .item-input {
+        margin: 0;
+    }
+}

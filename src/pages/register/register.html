@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>تسجيل | تسجيل الدخول</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="case" color="primary">
+            <ion-segment-button value="signIn">تسجيل الدخول</ion-segment-button>
+            <ion-segment-button value="signUp">تسجيل</ion-segment-button>
+        </ion-segment>
+
+        <div [ngSwitch]="case">
+            <div *ngSwitchCase="'signIn'">
+                <div class="sign">
+                    <form action="">
+                        <div class="sign__row">
+                            <ion-icon name="mail" class="sign__icon"></ion-icon>
+                            <ion-input required type="email" placeholder="البريد الالكترونى" class="sign__input"></ion-input>
+                        </div>
+                        <div class="sign__row">
+                            <ion-icon name="key" class="sign__icon"></ion-icon>
+                            <ion-input required type="password" placeholder="كلمة السر" class="sign__input"></ion-input>
+                        </div>
+                        <div class="sign__row sign__row--submit">
+                            <input type="submit" value="تسجيل الدخول">
+                        </div>
+                        <div class="sign__row sign__row--forgot">
+                            <span (click)="goToRestorePage()">نسيت كلمة السر ؟</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div *ngSwitchCase="'signUp'">
+                <div class="sign">
+                    <form action="">
+                        <div class="sign__row">
+                            <ion-icon name="person" class="sign__icon"></ion-icon>
+                            <ion-input required type="text" placeholder="الاسم" class="sign__input"></ion-input>
+                        </div>
+
+                        <div class="sign__row">
+                            <ion-icon name="mail" class="sign__icon"></ion-icon>
+                            <ion-input required type="email" placeholder="البريد الالكترونى" class="sign__input"></ion-input>
+                        </div>
+                        <div class="sign__row">
+                            <ion-icon name="key" class="sign__icon"></ion-icon>
+                            <ion-input required type="password" placeholder="كلمة السر" class="sign__input"></ion-input>
+                        </div>
+                        <div class="sign__row">
+                            <ion-icon name="phone-portrait" class="sign__icon"></ion-icon>
+                            <ion-input type="password" placeholder="رقم الهاتف (اختيارى)" class="sign__input"></ion-input>
+                        </div>
+                        <div class="sign__row sign__row--submit">
+                            <input type="submit" value="تسجيل">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--positioned shape-->
+    <ion-icon name="clipboard" class="positioned positioned--1"></ion-icon> 
+</ion-content>

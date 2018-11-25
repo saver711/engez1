@@ -1,0 +1,35 @@
+page-add-note {
+
+    .toolbar-background,
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: color($colors, primary2);
+    }
+    
+    .add{
+        
+        &__btns{
+            @include fcenter;
+            
+            button{
+                padding: 0 4rem;
+                
+                &:first-of-type{
+                    background-color: color($colors, primary2);
+                }
+            }
+        }
+        
+        &__back{
+            background-color: color($colors, danger);
+            margin-right: 2rem;
+        }
+    }
+    
+    
+    
+    //////////////////////////////////////////// reset ionic
+    .list > .item-block:first-child,.list-ios > .item-block:first-child, .list-md > .item-block:first-child, .list-wp > .item-block:first-child{
+        border: none;
+    }
+}

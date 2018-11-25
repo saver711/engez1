@@ -1,0 +1,402 @@
+page-home {
+
+    .fixed-content, .scroll-content{
+        background: linear-gradient(to bottom, color($colors, primary) 15%, color($colors, light-gray) 15%);
+    }
+    .content {
+        background: linear-gradient(to bottom, color($colors, primary) 17%, color($colors, light-gray) 15%);
+    }
+    
+    .logo{
+        width: 5rem;
+        @include fcenter;
+    }
+
+    ///////////////////////////////////////S Header
+
+    .title {
+
+        .toolbar-title,
+        .toolbar-title-md,
+        .toolbar-title-ios {
+            justify-content: space-between;
+            padding-left: .7rem;
+            
+            ion-icon{
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    ///////////////////////////////////////// S Grid
+
+    .upper-grid {
+        padding: 0;
+        margin-top: 1.5rem;
+
+        &__col {
+            padding: 0;
+        }
+
+        &__list {
+            margin: 0;
+        }
+    }
+
+    .item {
+        padding: 0;
+    }
+
+    .item-inner,
+    .item-ios.item-block .item-inner,
+    .item-md.item-block .item-inner {
+        padding: 0;
+
+        .label {
+            margin: 0;
+        }
+    }
+
+    /////////////////////////////////////////// E Grid
+
+
+    /////////////////////////////////////////////S Tasks
+    .card {
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        background: transparent;
+        border-radius: 12px;
+        box-shadow: 0px 21px 42px -16px #aaaaaa;
+
+        &__content {
+            background-color: color($colors, light);
+            padding: 0;
+            z-index: 1;
+            position: relative;
+        }
+
+        .item {
+            background: transparent;
+        }
+
+        &__header {
+            padding: 0;
+            font-weight: 600;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.6rem;
+            background: color($colors, light);
+        }
+
+        &__list,
+        &__list[inset] {
+            margin: 0;
+        }
+
+        &__item {
+            min-height: 8rem;
+
+            ion-label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%
+            }
+        }
+
+        &__tasks {
+            width: 49%;
+            font-weight: bold;
+            padding: 0 1rem 0 0;
+
+            p:not(:last-of-type) {
+                border-bottom: 1px solid #eae7e7;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__icon {
+            float: left;
+            font-size: 2.2rem;
+            width: 4rem;
+            height: 3.8rem;
+            @include fcenter;
+        }
+
+        &__title {
+            padding: 0 .6rem 0 0;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 4rem);
+            height: 38px;
+            border-bottom: 1px solid #ddd;
+
+            span {
+                display: inline-block;
+                margin-right: 3px;
+            }
+        }
+
+    }
+
+    //////////////////////////////////////////////// S Cards
+
+    .daily-card {
+        animation: moveFromTop .8s ease;
+        border-right: 10px solid color($colors, dp);
+        .card__header {
+            color: color($colors, dp);
+        }
+
+        .card__tasks {
+            p {
+                span {
+                    color: color($colors, dp);
+                }
+            }
+        }
+
+        .card__icon {
+            background-color: color($colors, dp);
+        }
+
+        .circle2 {
+            box-shadow: 0px 21px 42px -16px color($colors, dp);
+            .negative-percent {
+                background-color: color($colors, dp);
+            }
+        }
+
+    }
+
+    .weekly-card {
+        animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
+        border-right: 10px solid color($colors, wp);
+
+        .card__header {
+            color: color($colors, wp);
+        }
+
+        .card__tasks {
+            p {
+                span {
+                    color: color($colors, wp);
+                }
+            }
+        }
+
+        .card__icon {
+            background-color: color($colors, wp);
+        }
+
+        .circle2 {
+            box-shadow: 0px 21px 42px -16px color($colors, wp);
+
+            .negative-percent {
+                background-color: color($colors, wp);
+            }
+        }
+
+        .card__content {
+            display: none;
+
+        }
+    }
+
+    .monthly-card {
+        animation: moveFromLeft .8s cubic-bezier(.64, .34, .65, 1.82);
+        border-right: 10px solid color($colors, mp);
+
+        .card__header {
+            color: color($colors, mp);
+        }
+
+        .card__tasks {
+            p {
+                span {
+                    color: color($colors, mp);
+                }
+            }
+        }
+
+        .card__icon {
+            background-color: color($colors, mp);
+        }
+
+        .circle2 {
+            box-shadow: 0px 21px 42px -16px color($colors, mp);
+
+            .negative-percent {
+                background-color: color($colors, mp);
+            }
+        }
+
+        .card__content {
+            display: none;
+
+        }
+    }
+
+    .year-card {
+        animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
+        border-right: 10px solid color($colors, yp);
+
+        .card__header {
+            color: color($colors, yp);
+        }
+
+        .card__tasks {
+            p {
+                span {
+                    color: color($colors, yp);
+                }
+            }
+        }
+
+        .card__icon {
+            background-color: color($colors, yp);
+        }
+
+        .circle2 {
+            box-shadow: 0px 21px 42px -16px color($colors, yp);
+
+            .negative-percent {
+                background-color: color($colors, yp);
+            }
+        }
+
+        .card__content {
+            display: none;
+
+        }
+    }
+
+    ///////////////////E Tasks
+
+    ///////////////////////////////////////////////////// S achieved
+
+    .card__shape {
+        position: relative;
+        width: 49%;
+    }
+
+    .circle2 {
+        width: 7rem;
+        height: 7rem;
+        background-color: transparent;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 10px 2px #cbc6c6;
+        position: relative;
+
+        span.inner {
+            display: inline-block;
+            border-radius: 50%;
+            width: 87%;
+            height: 87%;
+            background: white;
+            @include pcenter;
+            box-shadow:0px 0px 10px 2px #cbc6c6;
+        }
+
+        .negative-percent {
+            bottom: 0;
+            position: absolute;
+            width: 100%;
+            display: inline-block;
+            z-index: -1;
+
+        }
+
+        &__achieved {
+            @include pcenter;
+
+            p {
+                line-height: 18px;
+                font-size: 2rem;
+                font-weight: bold;
+                color: #8e9093;
+            }
+
+        }
+    }
+
+    /////////////////////////////////////////////// E achieved
+
+    //////////////////////////////////////////////////S Circles
+
+    .circle {
+        color: color($colors, light);
+        @include fcenter;
+        flex-direction: column;
+        width: 6.4rem;
+        height: 6.4rem;
+        border-radius: 50%;
+        margin: 0 auto;
+        font-family: 'Cairo', sans-serif;
+    }
+
+    .note {
+        box-shadow: 0px 21px 42px -8px color($colors, primary);
+    }
+
+    .tomato {
+
+        box-shadow: 0px 21px 42px -13px color($colors, pamap);
+    }
+
+    .tomato,
+    .note {
+        color: #333;
+        border-radius: 50%;
+        background: #fff;
+        padding: 0.9rem;
+    }
+
+    //////////////////////////////////////////// E Circles
+
+    .btn-bg {
+        background-color: color($colors, secondary);
+    }
+
+    /////////////////////////////////////// reset ionic
+    .header::after,
+    .tabs[tabsPlacement="top"] > .tabbar::after,
+    .footer::before,
+    .tabs[tabsPlacement="bottom"] > .tabbar::before,
+    
+    .header-md::after,
+    .tabs-md[tabsPlacement="top"] > .tabbar::after,
+    .footer-md::before,
+    .tabs-md[tabsPlacement="bottom"] > .tabbar::before,
+    
+    .header-ios::after,
+    .tabs-ios[tabsPlacement="top"] > .tabbar::after,
+    .footer-ios::before,
+    .tabs-ios[tabsPlacement="bottom"] > .tabbar::before,
+    
+    .header-wp::after,
+    .tabs-wp[tabsPlacement="top"] > .tabbar::after,
+    .footer-wp::before,
+    .tabs-wp[tabsPlacement="bottom"] > .tabbar::before{
+        display: none;
+    }
+    
+    .item p,
+    .card p,
+    
+    .item-md p,
+    .card-md p,
+    
+    .item-ios p,
+    .card-ios p,
+    
+    .item-wp p,
+    .card-wp p{
+        margin: 0;
+    }
+}

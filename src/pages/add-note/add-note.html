@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>اضافة مذكرة</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list class="add">
+        <ion-item class="add__item">
+            <ion-input type="text" placeholder="أكتب العنوان :"></ion-input>
+        </ion-item>
+
+        <ion-item class="add__item">
+            <ion-textarea placeholder="وصف المذكرة ( اختيارى ) :"></ion-textarea>
+        </ion-item>
+    </ion-list>
+
+    <div class="add__btns">
+        <button ion-button>اضافة</button>
+        <button ion-button (click)="goBack()" class="add__back">رجوع</button>
+    </div>
+</ion-content>

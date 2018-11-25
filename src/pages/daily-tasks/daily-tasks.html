@@ -1,0 +1,107 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>الأهداف اليومية</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="tasks">
+        <div class="task">
+            <div class="task__row">
+                <p class="task__title">قراءة القران</p>
+            </div>
+            <div class="task__options">
+                <div class="task__clickable">
+                    <ion-icon class="task__create" name="create" (click)="goToAddTask()"></ion-icon>
+                    <ion-icon class="task__trash" name="trash" (click)="presentConfirm()"></ion-icon>
+                    <ion-icon class="task__checkmark" name="checkmark" (click)="showCheckbox()"></ion-icon>
+                </div>
+                
+                <div class="task__fixed">
+                   <ion-icon class="task__repeat" name="repeat"></ion-icon>
+                   <ion-icon class="task__alarm active" name="alarm"></ion-icon>
+               </div>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task__row">
+                <p class="task__title">حل الواجب المنزلى</p>
+            </div>
+            <div class="task__options">
+                <div class="task__clickable">
+                    <ion-icon class="task__create" name="create" (click)="goToAddTask()"></ion-icon>
+                    <ion-icon class="task__trash" name="trash" (click)="presentConfirm()"></ion-icon>
+                    <ion-icon class="task__checkmark" name="checkmark" (click)="showCheckbox()"></ion-icon>
+                </div>
+                
+                <div class="task__fixed">
+                   <ion-icon class="task__repeat" name="repeat"></ion-icon>
+                   <ion-icon class="task__alarm active" name="alarm"></ion-icon>
+               </div>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task__row">
+                <p class="task__title">الذهاب الى السينيما</p>
+            </div>
+            <div class="task__options">
+                <div class="task__clickable">
+                    <ion-icon class="task__create" name="create" (click)="goToAddTask()"></ion-icon>
+                    <ion-icon class="task__trash" name="trash" (click)="presentConfirm()"></ion-icon>
+                    <ion-icon class="task__checkmark" name="checkmark" (click)="showCheckbox()"></ion-icon>
+                </div>
+                
+                <div class="task__fixed">
+                   <ion-icon class="task__repeat" name="repeat"></ion-icon>
+                   <ion-icon class="task__alarm active" name="alarm"></ion-icon>
+               </div>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task__row">
+                <p class="task__title">حفظ الورد اليومي</p>
+            </div>
+            <div class="task__options">
+                <div class="task__clickable">
+                    <ion-icon class="task__create" name="create" (click)="goToAddTask()"></ion-icon>
+                    <ion-icon class="task__trash" name="trash" (click)="presentConfirm()"></ion-icon>
+                    <ion-icon class="task__checkmark" name="checkmark" (click)="showCheckbox()"></ion-icon>
+                </div>
+                
+                <div class="task__fixed">
+                   <ion-icon class="task__repeat" name="repeat"></ion-icon>
+                   <ion-icon class="task__alarm active" name="alarm"></ion-icon>
+               </div>
+            </div>
+        </div>
+
+        <div class="task">
+            <div class="task__row">
+                <p class="task__title">كتابة القصيده الجديدة</p>
+            </div>
+            <div class="task__options">
+                <div class="task__clickable">
+                    <ion-icon class="task__create" name="create" (click)="goToAddTask()"></ion-icon>
+                    <ion-icon class="task__trash" name="trash" (click)="presentConfirm()"></ion-icon>
+                    <ion-icon class="task__checkmark" name="checkmark" (click)="showCheckbox()"></ion-icon>
+                </div>
+                
+                <div class="task__fixed">
+                   <ion-icon class="task__repeat" name="repeat"></ion-icon>
+                   <ion-icon class="task__alarm active" name="alarm"></ion-icon>
+               </div>
+            </div>
+        </div>
+
+    </div>
+
+    <ion-fab class="add-task" (click)="goToAddTask()" bottom right>
+        <button ion-fab class="fab-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+    </ion-fab>
+</ion-content>

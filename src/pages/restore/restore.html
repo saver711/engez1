@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar>
+    </ion-navbar>
+
+</ion-header>
+
+ <ion-content padding>
+  <!--
+  when right: show .mas__right and the box-shadow for .msg is #7AAAD2
+  when wrong: show .mas__wrong and the box-shadow for .msg is #d75643
+  -->
+    <div class="restore">
+        <form action="">
+            <div class="restore__row">
+                <ion-icon name="mail" class="restore__icon"></ion-icon>
+                <ion-input required type="email" placeholder="البريد الالكترونى" class="restore__input"></ion-input>
+            </div>
+            <div class="restore__row restore__row--submit">
+                <input type="submit" value="استعادة">
+            </div>
+        </form>
+
+    </div>
+    
+    <div class="msg" style="box-shadow: 0px 0px 20px 1px #7AAAD2;">
+       <p class="msg_right ">تم ارسال كلمة السر للبريد<br>تحقق من بريدك الالكترونى</p>
+       <p class="msg__wrong d-none" >البريد الالكترونى خطأ</p>
+   </div>
+</ion-content>

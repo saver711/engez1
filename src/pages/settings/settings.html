@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>الاعدادات</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list class="set">
+        <ion-item class="set__personal">
+            <p class="set__label">المعلومات الشخصية</p>
+            <ion-icon item-end class="set__icon" name="create" (click)="goTo('editSettings')"></ion-icon>
+        </ion-item>
+        
+        
+        <ion-item class="set__name set__row">
+           <ion-icon item-start name="person" class="set__icon"></ion-icon>
+            <p class="set__label">الاسم :</p>
+            <p class="set__value">Ahmed Hassan</p>
+        </ion-item>
+
+        <ion-item class="set__phone set__row">
+           <ion-icon item-start name="call" class="set__icon"></ion-icon>
+            <p class="set__label">الهاتف :</p>
+            <p class="set__value">+201126183678</p>
+        </ion-item>
+
+        <ion-item class="set__email set__row">
+           <ion-icon item-start name="key" class="set__icon"></ion-icon>
+            <p class="set__label">البريد الالكترونى :</p>
+            <p class="set__value">Ahwork711@gmail.com</p>
+        </ion-item>
+        
+
+        <ion-item class="set__pass" (click)="goTo('editPassword')">
+            <p class="set__label">تغيير كلمة السر</p>
+            <i item-end class="fa fa-chevron-left set__icon" aria-hidden="true"></i>
+        </ion-item>
+        <ion-item class="set__out">
+            <p class="set__label">تسجيل خروج</p>
+            <ion-icon item-end name="log-out" class="set__icon"></ion-icon>
+        </ion-item>
+    </ion-list>
+    
+</ion-content>

@@ -1,0 +1,455 @@
+///////////////////////////////////////////////////// S General Settings
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+@mixin fcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin pcenter {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+input::placeholder {
+    direction: rtl;
+}
+
+/////////////////////////////////////////////////////// E General Settings
+
+
+/////////////////////////////////////////////////////// S General Header Styling
+.toolbar-background,
+.toolbar-background-md,
+.toolbar-background-ios {
+    background-color: color($colors, primary);
+}
+
+.title {
+    ////////////////////// S reset ionic
+    text-align: center;
+    background-color: transparent;
+
+    .toolbar-title,
+    .toolbar-title-md,
+    .toolbar-title-ios {
+        color: color($colors, light);
+        font-size: 1.9rem;
+        @include fcenter;
+    }
+    ///////////////////// E Reset Ionic
+    &__register {
+        font-size: 2.5rem;
+    }
+}
+
+/////////////////////////////////////////////////////////// E General Header Styling
+
+
+/////////////////////////////////////////////////////////// S Share In tabbar
+.share {
+    z-index: 99999;
+    position: fixed;
+    bottom: 30px;
+    right: 30vw;
+    display: none;
+    background-color: transparent;
+    perspective: 1500px;
+
+    &__item {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 0 !important;
+        background-color: color($colors, primary);
+        color: color($colors, light);
+        @include fcenter;
+        padding: 0 !important;
+        animation: flip 1s ease;
+
+        .label {
+            @include fcenter;
+            margin: 0;
+        }
+
+        .item-inner {
+            border: 0 !important;
+            padding: 0 !important;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////// E Share In tabbar
+
+
+/////////////////////////// S Tasks Pages (daily, weekly, monthly, year) & notes page
+.tasks,
+.notes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+
+
+    .task,
+    .note {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+        border-radius: 5px;
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-bottom: .8rem;
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .6rem .8rem .3rem .8rem;
+            background: white;
+            border-bottom: 1.7px solid #f2f2f2;
+        }
+
+
+        &__title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .7);
+            line-height: 1.4;
+        }
+
+        &:first-of-type {
+            animation: moveFromTop .8s ease;
+        }
+
+        &:nth-of-type(2) {
+            animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
+        }
+
+        &:nth-of-type(3) {
+            animation: moveFromLeft .8s cubic-bezier(.64, .34, .65, 1.82);
+        }
+
+        &:nth-of-type(4) {
+            animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
+        }
+
+        &:last-of-type {
+            animation: moveFromBottom .8s ease;
+        }
+
+        &__options {
+            padding: 4px 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+
+            ion-icon {
+                font-size: 2.5rem;
+                display: inline-block;
+                width: 20px;
+                @include fcenter;
+                display: inline-flex;
+
+            }
+        }
+
+        &__fixed {
+            ion-icon:not(:last-of-type) {
+                margin-left: 8px;
+            }
+        }
+
+        &__clickable {
+            ion-icon:not(:first-of-type) {
+                margin-right: 8px;
+            }
+        }
+
+        &__trash {
+            color: color($colors, danger);
+        }
+
+        &__checkmark {
+            color: #11f001;
+        }
+
+        &__repeat {
+            color: #6d6b6b;
+
+            &.active {
+                color: navajowhite;
+            }
+        }
+
+        &__create {
+            color: #6d6b6b;
+        }
+
+    }
+
+}
+/////////////////////////// E Tasks Pages (daily, weekly, monthly, year) & notes page
+
+
+///////////////////////////////////////////////////// S btn in notes and tasks pages
+.fab-btn{
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+}
+///////////////////////////////////////////////////// E btn in notes and tasks pages
+
+//////////////////////////////////////////////////////// S Add Task and note buttons
+.add-task,
+.add-note {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    @include fcenter;
+    z-index: 9999;
+
+    i {
+        color: color($colors, light);
+        font-size: 5rem;
+    }
+}
+//////////////////////////////////////////////////////// E Add Task and note buttons
+
+//////////////////////////////////////// S edit password ang personal information
+.edit {
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        button {
+            padding: 0 4rem;
+
+            &:first-of-type {
+                background-color: color($colors, primary2);
+            }
+
+            &:last-of-type {
+                background-color: color($colors, danger);
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+//////////////////////////////////////// E edit password ang personal information
+
+///////////////////////////////////////////////////////////////////// S keyframes
+
+/*******************
+في صفحة الهوم وصفحتين النوتس والمهمات اول كارد ها تاخد 
+moveFromTop
+واخر كارد ها تاخد
+moveFromBottom
+وال ف النص واحده تاخد
+moveFromRight
+والتانيه تاخد
+moveFromLeft
+وهكذا
+************************/
+
+@keyframes flip {
+    0% {
+        transform: rotateX(80deg);
+    }
+
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@keyframes moveFromTop {
+    from {
+        transform: translateY(-400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromRight {
+    from {
+        transform: translateX(400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromLeft {
+    from {
+        transform: translateX(-400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveFromBottom {
+    from {
+        transform: translateY(400px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0) translateY(-55%) rotate(0);
+        transform-origin: bottom;
+
+    }
+
+    33% {
+        transform: translateX(-2px) translateY(-55%) rotate(-2deg);
+        transform-origin: bottom;
+
+    }
+
+    66% {
+        transform: translateX(4px) translateY(-55%) rotate(2deg);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: translateX(0) translateY(-55%) rotate(0);
+        transform-origin: bottom;
+    }
+
+}
+
+////////////////////////////////////////////////////////////////// E keyframes
+
+/////////////////////////////////////////////////////////////////// reset ionic
+ion-app,
+ion-app.ios,
+ion-app.md,
+ion-app.wp{
+    font-family: 'Cairo', sans-serif;
+}
+
+.header::after,
+.tabs[tabsPlacement="top"] > .tabbar::after,
+.footer::before,
+.tabs[tabsPlacement="bottom"] > .tabbar::before,
+.header-md::after,
+.tabs-md[tabsPlacement="top"] > .tabbar::after,
+.footer-md::before,
+.tabs-md[tabsPlacement="bottom"] > .tabbar::before,
+.header-ios::after,
+.tabs-ios[tabsPlacement="top"] > .tabbar::after,
+.footer-ios::before,
+.tabs-ios[tabsPlacement="bottom"] > .tabbar::before,
+.header-wp::after,
+.tabs-wp[tabsPlacement="top"] > .tabbar::after,
+.footer-wp::before,
+.tabs-wp[tabsPlacement="bottom"] > .tabbar::before{
+    display: none !important;
+    background-image: none;
+}
+
+.back-button-text,
+.back-button-text-ios,
+.back-button-text-md,
+.back-button-text-wp{
+    display: none;
+}
+
+.bar-button-default,
+.bar-button-default.bar-button-default,
+.bar-button-clear-default,
+
+.bar-button-default-ios,
+.bar-button-default.bar-button-ios-default,
+.bar-button-clear-ios-default,
+
+.bar-button-default-md,
+.bar-button-default.bar-button-md-default,
+.bar-button-clear-md-default,
+
+.bar-button-default-wp,
+.bar-button-default.bar-button-wp-default,
+.bar-button-clear-wp-default{
+    color: color($colors, light);
+}
+
+.toolbar ion-title,
+.toolbar-ios ion-title,
+.toolbar-md ion-title,
+.toolbar-wp ion-title{
+    padding: 0 .6rem;
+}
+
+.toolbar-title,
+.toolbar-title-md,
+.toolbar-title-ios,
+.toolbar-title-wp{
+    padding: 0;
+}
+
+.tabs .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+.tabs-wp .tab-button[aria-selected=true] .tab-button-icon{
+    color: color($colors, primary2);
+}
+
+.tabbar {
+    height: 42px;
+    box-shadow: 0px -7px 20px -6px #7aaad2;
+    bottom: 0 !important; // for nokia lumia 520
+    top: auto !important; // // for nokia lumia 520
+}
+
+.tabs .tab-button-icon,
+.tabs-md .tab-button-icon,
+.tabs-ios .tab-button-icon,
+.tabs-wp .tab-button-icon{
+    color: #9fc1dc;
+}
+
+.text-input-wp {
+    border: 0; // windows phone
+}

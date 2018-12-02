@@ -23,10 +23,11 @@
         </ion-list>
         
         <div class="repeat">
-            <ion-item class="add__row add__repeat">
-                <ion-checkbox (click)="toggle()" checked="false"></ion-checkbox>
-                <ion-label class="add__label add__repeat-label" (click)="toggle()">متكرر ؟</ion-label>
-            </ion-item>
+            <div class="add__row add__repeat">
+                <!--<ion-checkbox (click)="toggle()" checked="false"></ion-checkbox>-->
+                <input id="repeatBox" type="checkbox" name="confirmed" color="primary" (click)="toggle()"/>
+                <label for="repeatBox" class="add__label add__repeat-label">متكرر ؟</label>
+            </div>
             
             <p class="repeat__msg">سيتكرر يوميا</p>
             

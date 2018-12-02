@@ -73,14 +73,10 @@ page-add-task {
             padding: 0;
             border-bottom: 2px solid #ddd;
             margin-bottom: 3rem;
-
-            .item-inner {
-                width: 7rem;
-                flex: unset;
-            }
-
-            .item-cover {
-                width: 10rem;
+            
+            &-label{
+                max-width: 51px;
+                margin: 1rem 0 1rem .9rem;
             }
         }
 

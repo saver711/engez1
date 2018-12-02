@@ -12,7 +12,7 @@
         
         <ion-list radio-group class="add__row add__argent-case">
             <ion-item class="add__argent">
-                <ion-radio value="argent"></ion-radio>
+                <ion-radio value="argent" checked></ion-radio>
                 <ion-label>مهم وعاجل</ion-label>
             </ion-item>
 
@@ -24,7 +24,7 @@
         
         <div class="repeat">
             <ion-item class="add__row add__repeat">
-                <ion-checkbox (click)="toggle()"></ion-checkbox>
+                <ion-checkbox (click)="toggle()" checked="false"></ion-checkbox>
                 <ion-label class="add__label add__repeat-label" (click)="toggle()">متكرر ؟</ion-label>
             </ion-item>
             

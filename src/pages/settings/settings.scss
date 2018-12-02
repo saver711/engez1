@@ -6,22 +6,18 @@ page-settings {
     .toolbar-background,
     .toolbar-background-md,
     .toolbar-background-ios {
-        background-color: color($colors, primary2);
+        background-color: color($colors, primary);
     }
 
     .set {
 
         &__personal {
-            background: color($colors, primary2);
+            background: color($colors, primary);
             color: color($colors, light);
 
             .set__label {
                 color: color($colors, light);
                 font-size: 1.8rem;
-            }
-
-            .set__icon {
-                color: color($colors, light);
             }
 
             .item-inner {
@@ -78,32 +74,58 @@ page-settings {
         &__icon {
             width: 3rem;
             position: relative;
-            color: color($colors, primary2);
+            color: color($colors, primary);
 
             &::before {
                 @include pcenter;
+            }
+        }
+
+        &__edit-icon {
+            color: #646161;
+        }
+
+        &__edit {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            background-color: color($colors, light);
+            padding: 0 40px 0 10px;
+            align-items: center;
+            display: none;
+            max-height: 53px;
+            
+            &:not(:last-of-type){
+                margin-bottom: 7px;
+            }
+            ion-input{
+                
+            }
+            
+            button{
+                
             }
         }
     }
 
 
     ///////////////////////////////////////// reset ionic
-    
+
     .item ion-icon[item-left] + .item-inner,
     .item ion-icon[item-left] + .item-input,
     .item ion-icon[item-start] + .item-inner,
     .item ion-icon[item-start] + .item-input,
-    
+
     .item-md ion-icon[item-left] + .item-inner,
     .item-md ion-icon[item-left] + .item-input,
     .item-md ion-icon[item-start] + .item-inner,
     .item-md ion-icon[item-start] + .item-input,
-    
+
     .item-ios ion-icon[item-left] + .item-inner,
     .item-ios ion-icon[item-left] + .item-input,
     .item-ios ion-icon[item-start] + .item-inner,
     .item-ios ion-icon[item-start] + .item-input,
-    
+
     .item-wp ion-icon[item-left] + .item-inner,
     .item-wp ion-icon[item-left] + .item-input,
     .item-wp ion-icon[item-start] + .item-inner,

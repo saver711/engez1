@@ -8,30 +8,44 @@
     <ion-list class="set">
         <ion-item class="set__personal">
             <p class="set__label">المعلومات الشخصية</p>
-            <ion-icon item-end class="set__icon" name="create" (click)="goTo('editSettings')"></ion-icon>
         </ion-item>
-        
-        
+
+
         <ion-item class="set__name set__row">
-           <ion-icon item-start name="person" class="set__icon"></ion-icon>
+            <ion-icon item-start name="person" class="set__icon"></ion-icon>
             <p class="set__label">الاسم :</p>
             <p class="set__value">Ahmed Hassan</p>
+            <ion-icon item-end class="set__icon set__edit-icon" name="create" (click)="slideDown('editName')"></ion-icon>
         </ion-item>
+        <div class="set__edit set__edit--name">
+            <ion-input type="text" placeholder="Ahmed Hassan"></ion-input>
+            <button class="edit-confirm" ion-button (click)="slideUp('editName')">تعديل</button>
+        </div>
 
         <ion-item class="set__phone set__row">
-           <ion-icon item-start name="call" class="set__icon"></ion-icon>
+            <ion-icon item-start name="call" class="set__icon"></ion-icon>
             <p class="set__label">الهاتف :</p>
             <p class="set__value">+201126183678</p>
+            <ion-icon item-end class="set__icon set__edit-icon" name="create" (click)="slideDown('editPhone')"></ion-icon>
         </ion-item>
+        <div class="set__edit set__edit--phone">
+            <ion-input type="tel" placeholder="+201126183678"></ion-input>
+            <button class="edit-confirm" ion-button (click)="slideUp('editPhone')">تعديل</button>
+        </div>
 
         <ion-item class="set__email set__row">
-           <ion-icon item-start name="key" class="set__icon"></ion-icon>
+            <ion-icon item-start name="key" class="set__icon"></ion-icon>
             <p class="set__label">البريد الالكترونى :</p>
             <p class="set__value">Ahwork711@gmail.com</p>
+            <ion-icon item-end class="set__icon set__edit-icon" name="create" (click)="slideDown('editEmail')"></ion-icon>
         </ion-item>
-        
+        <div class="set__edit set__edit--email">
+            <ion-input type="email" placeholder="Ahwork711@gmail.com"></ion-input>
+            <button class="edit-confirm" ion-button (click)="slideUp('editEmail')">تعديل</button>
+        </div>
 
-        <ion-item class="set__pass" (click)="goTo('editPassword')">
+
+        <ion-item class="set__pass" (click)="goToeditPassword()">
             <p class="set__label">تغيير كلمة السر</p>
             <i item-end class="fa fa-chevron-left set__icon" aria-hidden="true"></i>
         </ion-item>
@@ -40,5 +54,6 @@
             <ion-icon item-end name="log-out" class="set__icon"></ion-icon>
         </ion-item>
     </ion-list>
-    
+
+
 </ion-content>

@@ -79,24 +79,28 @@ page-add-task {
                 margin: 1rem 0 1rem .9rem;
             }
         }
+        &__argent-form{
+            border-bottom: 1px solid #ddd;
+            padding: .7rem 0;
+        }
 
         &__argent-case {
-            border-bottom: 1px solid #ddd;
-            flex-direction: column;
-
-            ion-item {
-                height: 4.4rem;
-
-                .item-inner {
-                    flex-direction: row-reverse;
-                    justify-content: flex-end;
-                }
-            }
+            border: 0;
         }
 
         &__argent {
-            .item-inner {
-                border: none;
+            display: flex;
+            align-items: center;
+            input{
+                margin-left: .6rem;
+            }
+        }
+        
+        &__not-argent{
+            display: flex;
+            align-items: center;
+            input{
+                margin-left: .6rem;
             }
         }
 

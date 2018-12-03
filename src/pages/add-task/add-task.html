@@ -9,31 +9,31 @@
         <div class="add__row add__target">
             <ion-input type="text" placeholder="أكتب هدفك :"></ion-input>
         </div>
-        
-        <ion-list radio-group class="add__row add__argent-case">
-            <ion-item class="add__argent">
-                <ion-radio value="argent" checked></ion-radio>
-                <ion-label>مهم وعاجل</ion-label>
-            </ion-item>
+        <form class="add__row add__argent-form">
+            <fieldset id="group1" class="add__argent-case">
+                <div class="add__argent">
+                    <input type="radio" value="argent" id="argent" name="group1">
+                    <label for="argent">مهم وعاجل</label>
+                </div>
 
-            <ion-item class="add__not-argent">
-                <ion-radio value="notargent"></ion-radio>
-                <ion-label>مهم وغير عاجل</ion-label>
-            </ion-item>
-        </ion-list>
-        
+                <div class="add__not-argent">
+                    <input type="radio" value="argent" id="notArgent" name="group1">
+                    <label for="notArgent">مهم وغير عاجل</label>
+                </div>
+            </fieldset>
+        </form>
+
         <div class="repeat">
             <div class="add__row add__repeat">
-                <!--<ion-checkbox (click)="toggle()" checked="false"></ion-checkbox>-->
-                <input id="repeatBox" type="checkbox" name="confirmed" color="primary" (click)="toggle()"/>
+                <input id="repeatBox" type="checkbox" name="confirmed" color="primary" (click)="toggle()" />
                 <label for="repeatBox" class="add__label add__repeat-label">متكرر ؟</label>
             </div>
-            
+
             <p class="repeat__msg">سيتكرر يوميا</p>
-            
+
             <ion-icon name="alarm" class="add__icon repeat__icon" (click)="classToggle()"></ion-icon>
         </div>
-        
+
         <div class="add__row add__btns">
             <button ion-button class="add__go">اضافة</button>
             <button ion-button class="add__back" (click)="goBack()">رجوع</button>

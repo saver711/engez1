@@ -3,7 +3,7 @@ page-add-note {
     .toolbar-background,
     .toolbar-background-md,
     .toolbar-background-ios {
-        background-color: color($colors, primary2);
+        background-color: color($colors, primary);/*5/12*/
     }
     
     .add{
@@ -15,7 +15,7 @@ page-add-note {
                 padding: 0 4rem;
                 
                 &:first-of-type{
-                    background-color: color($colors, primary2);
+                    background-color: color($colors, primary);
                 }
             }
         }

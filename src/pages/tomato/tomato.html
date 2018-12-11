@@ -5,33 +5,24 @@
 
 
 <ion-content class="content">
-    <div class="mycontainer">
-        <div class="explain">
-            <ion-icon name="hand" class="explain__icon"></ion-icon>
-            <p class="explain__text">أهلا بكم</p>
-            <h2 class="explain__heading">ما هى تقنية الطماطم؟</h2>
-            <p>تعتمد هذه التقنيه على تحديد وقت معين لأداء مهمة ما وهذا الوقت متعارف عليه ب 25 دقيقة ثم بعد الانتهاء من العمل تأخذ قسطا من الراحه متعارف عليه ب 5 دقائق ومع كل تكرار لهذا النمط 4 مرات تأخذ 30 دقيقه راحه</p>
-            <button class="explain__btn" (click)="hideExplain()">فهمت !</button>
-        </div>
-
-        <ion-item class="time-picker">
-            <ion-label>مدة المهمة ( بالدقائق )</ion-label>
-            <ion-datetime displayFormat="mm:ss" pickerFormat="mm:ss" [(ngModel)]="myDate"></ion-datetime>
-        </ion-item>
-        
-        <!--date time will appear here-->
-        <div class="time">00:00</div>
-        
-
-        <div class="controls">
-            <ion-icon name="play" class="controls__icons controls__icons--play"></ion-icon>
-            
-            <!--these will appear just after the mission starts-->
-            <ion-icon name="pause" class="controls__icons"></ion-icon>
-            <ion-icon name="square" class="controls__icons" (click)="pushNotification()"></ion-icon>
-            <ion-icon name="close" class="controls__icons"></ion-icon>
-        </div>
-
+    <div class="explain">
+        <ion-icon name="hand" class="explain__icon"></ion-icon>
+        <p class="explain__text">أهلا بكم</p>
+        <h2 class="explain__heading">ما هى تقنية الطماطم؟</h2>
+        <p>تعتمد هذه التقنيه على تحديد وقت معين لأداء مهمة ما وهذا الوقت متعارف عليه ب 25 دقيقة ثم بعد الانتهاء من العمل تأخذ قسطا من الراحه متعارف عليه ب 5 دقائق ومع كل تكرار لهذا النمط 4 مرات تأخذ 30 دقيقه راحه</p>
     </div>
 
+    <ion-item class="time-picker">
+        <ion-label>مدة المهمة ( بالدقائق )</ion-label>
+        <ion-datetime displayFormat="mm:ss" pickerFormat="mm:ss" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+
+    <!--date time will appear here-->
+    <div class="time">00:00</div>
+
+
+    <div class="controls">
+        <button ion-button color="light" (click)="startTimer()">ابدأ</button>
+        <button ion-button (click)="pushNotification()">جرب الرساله</button>
+    </div>
 </ion-content>

@@ -20,14 +20,6 @@ export class TomatoPage {
     console.log('ionViewDidLoad TomatoPage');
   }
     
-    hideExplain(){
-        $('.explain').slideUp(200);
-        $('.header').delay(200).slideDown(100);
-        $('.mycontainer').css({
-            height: 'auto'
-        });
-    }
-    
     time: number = 20;
     
     pushNotification(){
@@ -36,7 +28,9 @@ export class TomatoPage {
             text: 'نهنئك على انجاز هذه المهمة حان وقت الراحة القصيرة',
             sound: this.setSound(),
             trigger: {at: new Date(new Date().getTime() + .1)},
-            led: 'FF0000'
+            led: 'FF0000',
+            icon: 'res://assets/icon/favicon.ico',
+            smallIcon: 'res://assets/icon/favicon.ico'
     });
     }
     
@@ -48,5 +42,4 @@ export class TomatoPage {
       return 'file://assets/sounds/bell.mp3'
     }
   }
-
 }

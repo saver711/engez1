@@ -1,13 +1,15 @@
 page-home {
 
-    .fixed-content, .scroll-content{
+    .fixed-content,
+    .scroll-content {
         background: linear-gradient(to bottom, color($colors, primary) 15%, color($colors, light-gray) 15%);
     }
+
     .content {
         background: linear-gradient(to bottom, color($colors, primary) 17%, color($colors, light-gray) 15%);
     }
-    
-    .logo{
+
+    .logo {
         width: 5rem;
         @include fcenter;
     }
@@ -15,17 +17,48 @@ page-home {
     ///////////////////////////////////////S Header
 
     .title {
+        position: relative;
+
+        /*6/12*/
+        &::after {
+            content: "";
+            display: none;
+            border: 10px solid transparent;
+            border-bottom: 15px solid color($colors, light);
+            position: absolute;
+            left: 12px;
+            top: 67%;
+        }
+
+        &.fadeAfter {
+            &::after {
+                display: inline-block;
+            }
+        }
 
         .toolbar-title,
         .toolbar-title-md,
         .toolbar-title-ios {
             justify-content: space-between;
             padding-left: .7rem;
-            
-            ion-icon{
+
+            ion-icon {
                 font-size: 2.6rem;
             }
         }
+    }
+
+    /*6/12*/
+    .register-msg {
+        position: absolute;
+        padding: .2rem .8rem;
+        font-size: 1.4rem;
+        background-color: color($colors, light);
+        color: color($colors, primary);
+        border-radius: 6px;
+        left: 17px;
+        top: -3px;
+        display: none;
     }
 
     ///////////////////////////////////////// S Grid
@@ -74,6 +107,7 @@ page-home {
             padding: 0;
             z-index: 1;
             position: relative;
+            border-top: 1px solid #ddd;
         }
 
         .item {
@@ -86,6 +120,7 @@ page-home {
             font-family: 'Cairo', sans-serif;
             font-size: 1.6rem;
             background: color($colors, light);
+
         }
 
         &__list,
@@ -132,7 +167,7 @@ page-home {
             align-items: center;
             width: calc(100% - 4rem);
             height: 38px;
-            border-bottom: 1px solid #ddd;
+            //border-bottom: 1px solid #ddd;
 
             span {
                 display: inline-block;
@@ -147,6 +182,7 @@ page-home {
     .daily-card {
         animation: moveFromTop .8s ease;
         border-right: 10px solid color($colors, dp);
+
         .card__header {
             color: color($colors, dp);
         }
@@ -165,6 +201,7 @@ page-home {
 
         .circle2 {
             box-shadow: 0px 21px 42px -16px color($colors, dp);
+
             .negative-percent {
                 background-color: color($colors, dp);
             }
@@ -300,7 +337,7 @@ page-home {
             height: 87%;
             background: white;
             @include pcenter;
-            box-shadow:0px 0px 10px 2px #cbc6c6;
+            box-shadow: 0px 0px 10px 2px #cbc6c6;
         }
 
         .negative-percent {
@@ -354,7 +391,8 @@ page-home {
         color: #333;
         border-radius: 50%;
         background: #fff;
-        padding: 0.9rem;
+        padding: 0.6rem 0.9rem 0.9rem;
+        /*9/12*/
     }
 
     //////////////////////////////////////////// E Circles
@@ -368,35 +406,38 @@ page-home {
     .tabs[tabsPlacement="top"] > .tabbar::after,
     .footer::before,
     .tabs[tabsPlacement="bottom"] > .tabbar::before,
-    
+
     .header-md::after,
     .tabs-md[tabsPlacement="top"] > .tabbar::after,
     .footer-md::before,
     .tabs-md[tabsPlacement="bottom"] > .tabbar::before,
-    
+
     .header-ios::after,
     .tabs-ios[tabsPlacement="top"] > .tabbar::after,
     .footer-ios::before,
     .tabs-ios[tabsPlacement="bottom"] > .tabbar::before,
-    
+
     .header-wp::after,
     .tabs-wp[tabsPlacement="top"] > .tabbar::after,
     .footer-wp::before,
-    .tabs-wp[tabsPlacement="bottom"] > .tabbar::before{
+    .tabs-wp[tabsPlacement="bottom"] > .tabbar::before {
         display: none;
     }
-    
+
     .item p,
     .card p,
-    
+
     .item-md p,
     .card-md p,
-    
+
     .item-ios p,
     .card-ios p,
-    
+
     .item-wp p,
-    .card-wp p{
+    .card-wp p {
         margin: 0;
     }
+
+    /////////////// S ourToast
+
 }

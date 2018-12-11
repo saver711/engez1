@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 declare var $: any;
 
@@ -9,7 +10,7 @@ declare var $: any;
 })
 export class HomePage {
     
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private toastCtrl: ToastController) {
 
   }
     
@@ -73,5 +74,23 @@ export class HomePage {
         }
         
     }
+    
+    ionViewWillEnter() {
+        /*6/12*/
+        $('.register-msg').delay(860).fadeIn();
+        setTimeout(function(){
+        $('.title').addClass('fadeAfter');
+           },1010)
+    }
+    
+    presentToast() {
+  let toast = this.toastCtrl.create({
+    message: 'سجل أولا',
+    duration: 88888000,
+    position: 'middle',
+      cssClass: 'ourToast'
+  });
 
+  toast.present();
+}
 }

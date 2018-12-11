@@ -31,55 +31,7 @@ page-add-task {
 
         }
 
-        .repeat {
-            position: relative;
-            z-index: 1;
-
-            &__msg {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-55%);
-                right: 11rem;
-                z-index: 1;
-                padding: .5rem 1rem;
-                box-shadow: 0px 0px 20px -2.8px color($colors, dp);
-                border-radius: 5px;
-                display: none;
-            }
-
-            &__icon {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-55%);
-                left: .4rem;
-                color: #666;
-                width: 3rem;
-                height: 3rem;
-
-                &::before {
-                    @include pcenter;
-                }
-
-                &.active {
-                    color: color($colors, dp);
-                    animation: shake .4s ease;
-                }
-            }
-        }
-
-        &__repeat {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            padding: 0;
-            border-bottom: 2px solid #ddd;
-            margin-bottom: 3rem;
-            
-            &-label{
-                max-width: 51px;
-                margin: 1rem 0 1rem .9rem;
-            }
-        }
-        &__argent-form{
+        &__argent-form {
             border-bottom: 1px solid #ddd;
             padding: .7rem 0;
         }
@@ -91,21 +43,24 @@ page-add-task {
         &__argent {
             display: flex;
             align-items: center;
-            input{
+
+            input {
                 margin-left: .6rem;
             }
         }
-        
-        &__not-argent{
+
+        &__not-argent {
             display: flex;
             align-items: center;
-            input{
+
+            input {
                 margin-left: .6rem;
             }
         }
 
         &__btns {
             @include fcenter;
+            margin-top: 2rem;
 
             button {
                 border: none;
@@ -152,33 +107,33 @@ page-add-task {
     .item.item-wp .checkbox-wp {
         margin: 0 1rem 0 0;
     }
-    
+
     .list > .item-block:last-child,
     .list > .item-wrapper:last-child .item-block,
     .list > .item-block:first-child,
     .list > .item-wrapper:first-child .item-block,
-    
+
     .list-ios > .item-block:last-child,
     .list-ios > .item-wrapper:last-child .item-block,
     .list-ios > .item-block:first-child,
     .list-ios > .item-wrapper:first-child .item-block,
-    
+
     .list-md > .item-block:first-child,
     .list-md > .item-wrapper:first-child .item-block,
     .list-md > .item-block:last-child,
     .list-md > .item-wrapper:last-child .item-block,
-    
+
     .list-wp > .item-block:last-child,
     .list-wp > .item-wrapper:last-child .item-block,
     .list-wp > .item-block:first-child,
-    .list-wp > .item-wrapper:first-child .item-block{
+    .list-wp > .item-wrapper:first-child .item-block {
         border: none;
     }
-    
+
     .list,
     .list-md,
     .list-ios,
-    .list-wp{
+    .list-wp {
         margin: 0;
     }
 }

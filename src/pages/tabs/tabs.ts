@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
-
 import { WhatsPage } from '../whats/whats';
 import { HomePage } from '../home/home';
 
@@ -13,14 +12,12 @@ declare var $: any;
 export class TabsPage {
 
   tab1Root = HomePage;
-
   tab3Root = WhatsPage;
 tab4Root = 'CallPage';
 
   constructor(private socialSharing: SocialSharing) {
 
   }
-    
     openFab(){
         $('.share').slideToggle(140);
     }
@@ -43,4 +40,5 @@ tab4Root = 'CallPage';
         }
         
     }
+    
 }

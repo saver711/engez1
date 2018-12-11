@@ -1,7 +1,7 @@
 <ion-header class="header">
     <ion-navbar class="navbar">
         <ion-title class="title">
-            <div class="logo">
+            <div class="logo" (click)="presentToast()">
                 <img src="../../assets/imgs/logo.png" alt="">
             </div>
             <p>مفكرة انجز</p>
@@ -12,6 +12,9 @@
 </ion-header>
 
 <ion-content padding>
+    <p class="register-msg" (click)="goTo('register')"><!--5/12-->
+        سجل الان لمزامنة اهدافك
+    </p>
 
     <!-------------------S Tasks----------------->
     <ion-grid class="upper-grid">
@@ -49,7 +52,7 @@
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-            
+
             <ion-col class="upper-grid__col" col-12>
 
                 <!------------------------------weekly-card----------------------------->
@@ -84,7 +87,7 @@
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-            
+
             <ion-col class="upper-grid__col" col-12>
 
                 <!------------------------------monthly-card----------------------------->
@@ -119,7 +122,7 @@
                     </ion-card-content>
                 </ion-card>
             </ion-col>
-            
+
             <ion-col class="upper-grid__col" col-12>
 
                 <!------------------------------year-card----------------------------->

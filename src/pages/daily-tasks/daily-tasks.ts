@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { AlertController } from 'ionic-angular';
 
+declare var $: any;
 
 @IonicPage()
 @Component({
@@ -84,6 +85,8 @@ export class DailyTasksPage {
           text: 'موافق',
           handler: data => {
             console.log('Checkbox data:', data);
+              $('.isDone').hide();
+              $('.done1').css('display', 'inline-flex');
           }
         });
         alert.addButton('الغاء');

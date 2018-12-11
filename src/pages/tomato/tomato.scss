@@ -1,14 +1,4 @@
 page-tomato {
-
-    .header{
-        display: none
-    }
-
-    .mycontainer {
-        overflow: hidden;
-        height: 100%;
-    }
-
     .navbar {
         padding: 0 1rem;
 
@@ -41,9 +31,8 @@ page-tomato {
     .explain {
 
         color: color($colors, light);
-        height: 100%;
         text-align: center;
-        padding: 5rem 1rem 0;
+        padding: 1rem 1rem 0;
 
         &__icon {
             font-size: 3rem;
@@ -57,17 +46,6 @@ page-tomato {
             line-height: 1.7;
         }
 
-        &__btn {
-            background-color: color($colors, light);
-            color: color($colors, pamap);
-            padding: 1rem 2rem;
-            border-radius: 100px;
-            border: 0;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
-
 
     }
 
@@ -76,7 +54,13 @@ page-tomato {
 
     ///////////////////////////
     .time-picker{
-        margin-top: 8rem;
+        margin: 2rem auto;
+        width: 25rem;
+        border-radius: 100px;
+        overflow: hidden;
+        .item-inner{
+            padding: 0;
+        }
     }
     
     .time {
@@ -92,33 +76,7 @@ page-tomato {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
-
-
-        &__icons {
-            width: 3rem;
-            height: 3rem;
-            background-color: color($colors, light);
-            color: color($colors, pamap);
-            border-radius: 50%;
-            position: relative;
-
-            &:not(last-of-type) {
-                margin-left: .6rem;
-            }
-
-            &::before {
-                @include pcenter;
-
-            }
-
-            &--play {
-
-                &::before {
-                    transform: translate(-31%, -44%);
-                }
-            }
-        }
+        margin-top: 1rem;
     }
 
     .swiper-pagination {

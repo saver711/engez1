@@ -1,6 +1,6 @@
 page-daily-tasks {
     .fixed-content {
-        background-color:#f2f2f2;
+        background-color: #f2f2f2;
     }
 
     .toolbar-background,
@@ -8,8 +8,8 @@ page-daily-tasks {
     .toolbar-background-ios {
         background-color: color($colors, dp);
     }
-
-    .tasks {
+    /*5/12*/
+    /*.tasks {
         .task {
             &__alarm {
                 &.active {
@@ -17,13 +17,11 @@ page-daily-tasks {
                 }
             }
         }
-
-    }
+    }*/
 
     /////////////////////////////////////////////////////////// add task icon
     .add-task {
         background-color: color($colors, dp);
         box-shadow: 0px 16px 42px -7px color($colors, dp);
-
     }
 }

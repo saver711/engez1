@@ -61,6 +61,7 @@ input::placeholder {
         font-size: 1.9rem;
         @include fcenter;
     }
+
     ///////////////////// E Reset Ionic
     &__register {
         font-size: 2.5rem;
@@ -74,9 +75,9 @@ input::placeholder {
 .share {
     z-index: 99999;
     position: fixed;
-    bottom: 30px;
+    bottom: 38px;
     right: 30vw;
-    display: none;
+    //display: none;
     background-color: transparent;
     perspective: 1500px;
 
@@ -148,26 +149,6 @@ input::placeholder {
             line-height: 1.4;
         }
 
-        &:first-of-type {
-            animation: moveFromTop .8s ease;
-        }
-
-        &:nth-of-type(2) {
-            animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
-        }
-
-        &:nth-of-type(3) {
-            animation: moveFromLeft .8s cubic-bezier(.64, .34, .65, 1.82);
-        }
-
-        &:nth-of-type(4) {
-            animation: moveFromRight .8s cubic-bezier(.64, .34, .65, 1.82);
-        }
-
-        &:last-of-type {
-            animation: moveFromBottom .8s ease;
-        }
-
         &__options {
             padding: 4px 1rem 0;
             display: flex;
@@ -177,19 +158,22 @@ input::placeholder {
 
             ion-icon {
                 font-size: 2.5rem;
-                display: inline-block;
                 width: 20px;
                 @include fcenter;
                 display: inline-flex;
+            }
 
+            ion-icon.done {
+                display: none;
+                color: #11f001;
             }
         }
-
-        &__fixed {
+        /*5/12*/
+        /*&__fixed {
             ion-icon:not(:last-of-type) {
                 margin-left: 8px;
             }
-        }
+        }*/
 
         &__clickable {
             ion-icon:not(:first-of-type) {
@@ -202,15 +186,7 @@ input::placeholder {
         }
 
         &__checkmark {
-            color: #11f001;
-        }
-
-        &__repeat {
-            color: #6d6b6b;
-
-            &.active {
-                color: navajowhite;
-            }
+            color: #8ad484; 
         }
 
         &__create {
@@ -220,15 +196,17 @@ input::placeholder {
     }
 
 }
+
 /////////////////////////// E Tasks Pages (daily, weekly, monthly, year) & notes page
 
 
 ///////////////////////////////////////////////////// S btn in notes and tasks pages
-.fab-btn{
+.fab-btn {
     width: 50px;
     height: 50px;
     box-shadow: none;
 }
+
 ///////////////////////////////////////////////////// E btn in notes and tasks pages
 
 //////////////////////////////////////////////////////// S Add Task and note buttons
@@ -245,6 +223,7 @@ input::placeholder {
         font-size: 5rem;
     }
 }
+
 //////////////////////////////////////////////////////// E Add Task and note buttons
 
 //////////////////////////////////////// S edit password ang personal information
@@ -272,19 +251,28 @@ input::placeholder {
 
 //////////////////////////////////////// E edit password ang personal information
 
-///////////////////////////////////////////////////////////////////// S keyframes
 
-/*******************
-في صفحة الهوم وصفحتين النوتس والمهمات اول كارد ها تاخد 
-moveFromTop
-واخر كارد ها تاخد
-moveFromBottom
-وال ف النص واحده تاخد
-moveFromRight
-والتانيه تاخد
-moveFromLeft
-وهكذا
-************************/
+//////////////////////////// edit home toast
+.ourToast {
+    background-color: rgba(0, 0, 0, .6);
+    
+    .toast-wrapper{
+        background: none;
+    }
+
+    .toast-container {
+        box-shadow: 0px 0px 5rem -.8rem color($colors, light);
+        border-radius: 10px;
+    }
+
+    .toast-message{
+        background-color: color($colors, primary);
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+///////////////////////////////////////////////////////////////////// S keyframes
 
 @keyframes flip {
     0% {
@@ -335,6 +323,7 @@ moveFromLeft
         transform: translateX(0);
     }
 }
+
 @keyframes shake {
     0% {
         transform: translateX(0) translateY(-55%) rotate(0);
@@ -366,7 +355,7 @@ moveFromLeft
 ion-app,
 ion-app.ios,
 ion-app.md,
-ion-app.wp{
+ion-app.wp {
     font-family: 'Cairo', sans-serif;
 }
 
@@ -385,7 +374,7 @@ ion-app.wp{
 .header-wp::after,
 .tabs-wp[tabsPlacement="top"] > .tabbar::after,
 .footer-wp::before,
-.tabs-wp[tabsPlacement="bottom"] > .tabbar::before{
+.tabs-wp[tabsPlacement="bottom"] > .tabbar::before {
     display: none !important;
     background-image: none;
 }
@@ -393,7 +382,7 @@ ion-app.wp{
 .back-button-text,
 .back-button-text-ios,
 .back-button-text-md,
-.back-button-text-wp{
+.back-button-text-wp {
     display: none;
 }
 
@@ -411,33 +400,33 @@ ion-app.wp{
 
 .bar-button-default-wp,
 .bar-button-default.bar-button-wp-default,
-.bar-button-clear-wp-default{
+.bar-button-clear-wp-default {
     color: color($colors, light);
 }
 
 .toolbar ion-title,
 .toolbar-ios ion-title,
 .toolbar-md ion-title,
-.toolbar-wp ion-title{
+.toolbar-wp ion-title {
     padding: 0 .6rem;
 }
 
 .toolbar-title,
 .toolbar-title-md,
 .toolbar-title-ios,
-.toolbar-title-wp{
+.toolbar-title-wp {
     padding: 0;
 }
 
 .tabs .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp .tab-button[aria-selected=true] .tab-button-icon{
+.tabs-wp .tab-button[aria-selected=true] .tab-button-icon {
     color: color($colors, primary2);
 }
 
 .tabbar {
-    height: 42px;
+    height: 52px;
     box-shadow: 0px -7px 20px -6px #7aaad2;
     bottom: 0 !important; // for nokia lumia 520
     top: auto !important; // // for nokia lumia 520
@@ -446,7 +435,7 @@ ion-app.wp{
 .tabs .tab-button-icon,
 .tabs-md .tab-button-icon,
 .tabs-ios .tab-button-icon,
-.tabs-wp .tab-button-icon{
+.tabs-wp .tab-button-icon {
     color: #9fc1dc;
 }
 
